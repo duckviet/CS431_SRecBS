@@ -46,7 +46,7 @@ for i, (epochs, val_ndcg, val_hr, test_ndcg, test_hr) in enumerate(data):
     axes[0].plot(
         epochs, test_ndcg, label=f'{model_name} Test', color=colors[i], linestyle='--'
     )
-axes[0].set_title('NDCG')
+axes[0].set_title('NDCG@10')
 axes[0].set_xlabel('Epoch')
 axes[0].set_ylabel('Score')
 axes[0].grid(True)
@@ -61,12 +61,12 @@ for i, (epochs, val_ndcg, val_hr, test_ndcg, test_hr) in enumerate(data):
     axes[1].plot(
         epochs, test_hr, label=f'{model_name} Test', color=colors[i], linestyle='--'
     )
-axes[1].set_title('HR')
+axes[1].set_title('HR@10')
 axes[1].set_xlabel('Epoch')
 axes[1].grid(True)
 axes[1].legend()
 
-fig.suptitle('So sánh NDCG và HR của 3 model (Val & Test)', fontsize=16)
+fig.suptitle('So sánh NDCG@10 và HR@10 của 3 model (Val & Test)', fontsize=16)
 plt.tight_layout(rect=[0, 0, 1, 0.95])
 
 # Lưu ảnh
