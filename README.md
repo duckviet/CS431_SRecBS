@@ -1,4 +1,4 @@
-```
+
 modified based on [SASRec.pytorch](https://github.com/pmixer/SASRec.pytorch), PyTorch(1.6+) implementation of SASRec for simplicity, fixed issues like positional embedding usage etc. (making it harder to overfit, except for that, in recsys, personalization=overfitting sometimes)
 
 ```
